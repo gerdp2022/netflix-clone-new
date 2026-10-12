@@ -1,0 +1,161 @@
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  transition: opacity 0.15s ease;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #e50914;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+  z-index: 2;
+  letter-spacing: 0.3px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #181818;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition-delay: 0.35s;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  transform: scale(1.28);
+  pointer-events: auto;
+}
+
+.thumbWrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.thumbVisible {
+  opacity: 1;
+}
+
+.thumbHidden {
+  opacity: 0;
+}
+
+.info {
+  padding: 10px 12px 14px;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.circleBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(42, 42, 42, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.circleBtn:first-child {
+  background: #fff;
+  color: #141414;
+  border-color: #fff;
+}
+
+.circleBtn:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.circleBtn:first-child:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.chevronBtn {
+  margin-left: auto;
+}
+
+.metaLine {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #d2d2d2;
+  margin: 0 0 4px;
+}
+
+.rating {
+  border: 1px solid #808080;
+  padding: 0 4px;
+  font-size: 11px;
+}
+
+.dot {
+  color: #808080;
+}
+
+.hd {
+  border: 1px solid #808080;
+  padding: 0 3px;
+  font-size: 10px;
+}
+
+.genres {
+  font-size: 11px;
+  color: #a6a6a6;
+  margin: 0;
+}

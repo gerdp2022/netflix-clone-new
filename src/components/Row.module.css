@@ -1,0 +1,65 @@
+.title {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 8px 4%;
+}
+
+/* Make wrapper stable */
+.Row {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+/* Swiper container */
+.Row :global(.swiper) {
+  height: 190px;
+  padding: 4px 4%;
+}
+
+@media (min-width: 900px) {
+  .Row :global(.swiper) {
+    height: 220px;
+  }
+}
+
+/* Slides */
+.Row :global(.swiper-slide) {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  aspect-ratio: 2 / 3;
+}
+
+/* Navigation buttons base style */
+.Row :global(.swiper-button-prev),
+.Row :global(.swiper-button-next) {
+  background: linear-gradient(90deg, rgba(20, 20, 20, 0.7), transparent) !important;
+  color: #fff !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px !important;
+  height: 100% !important;
+  margin-top: -95px;
+}
+
+.Row :global(.swiper-button-next) {
+  background: linear-gradient(270deg, rgba(20, 20, 20, 0.7), transparent) !important;
+}
+
+/* Smaller arrow icon */
+.Row :global(.swiper-button-prev::after),
+.Row :global(.swiper-button-next::after) {
+  font-size: 20px !important;
+  font-weight: 900;
+}
+
+/* Show on hover */
+.Row:hover :global(.swiper-button-prev),
+.Row:hover :global(.swiper-button-next) {
+  opacity: 1;
+  pointer-events: auto;
+}

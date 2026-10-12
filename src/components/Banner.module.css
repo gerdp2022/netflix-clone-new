@@ -1,0 +1,85 @@
+.banner {
+  position: relative;
+  height: 85vh;
+  min-height: 480px;
+  background-size: cover;
+  background-position: top center;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
+
+.content {
+  padding: 0 4% 90px;
+  max-width: 620px;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0 0 16px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  line-height: 1.05;
+}
+
+.overview {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  margin: 0 0 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.playBtn {
+  background: #fff;
+  color: #141414;
+}
+
+.playBtn:hover {
+  opacity: 0.8;
+}
+
+.infoBtn {
+  background: rgba(109, 109, 110, 0.7);
+  color: #fff;
+}
+
+.infoBtn:hover {
+  opacity: 0.8;
+}
+
+.fadeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, transparent, #141414);
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 2rem;
+  }
+  .overview {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+}
